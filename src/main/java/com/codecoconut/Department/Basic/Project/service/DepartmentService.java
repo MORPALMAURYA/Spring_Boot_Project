@@ -7,9 +7,12 @@ import java.util.List;
 
 @Service
 public interface DepartmentService {
-  public DepartmentEntity saveDepartment(DepartmentEntity departmentEntity);
+
+    public DepartmentEntity saveDepartment(DepartmentEntity departmentEntity);
 
    public List<DepartmentEntity> getAllDepartments();
 
    public DepartmentEntity getDepartmentById(Long departmentid);
+
+   public void deleteDepartmentById(Long departmentid);
 }

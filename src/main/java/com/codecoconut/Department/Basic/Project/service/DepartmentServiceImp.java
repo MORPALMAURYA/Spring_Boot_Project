@@ -12,6 +12,7 @@ public class DepartmentServiceImp implements DepartmentService {
     @Autowired
     private DepartmentRepositoty departmentRepositoty;
 
+
     @Override
     public DepartmentEntity saveDepartment(DepartmentEntity departmentEntity) {
         return departmentRepositoty.save(departmentEntity);
@@ -25,5 +26,10 @@ public class DepartmentServiceImp implements DepartmentService {
     @Override
     public DepartmentEntity getDepartmentById(Long departmentid) {
         return departmentRepositoty.findById(departmentid).get();
+    }
+
+    @Override
+    public void deleteDepartmentById(Long departmentid) {
+        departmentRepositoty.deleteById(departmentid);
     }
 }
